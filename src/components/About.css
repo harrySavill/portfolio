@@ -1,0 +1,81 @@
+#about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+.about-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+}
+
+.about-bio {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.about-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.about-cta-btn, .about-secondary-btn {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-family: inherit;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.8rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.about-cta-btn {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 2px solid var(--accent);
+}
+
+.about-cta-btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.about-secondary-btn {
+    background: none;
+    color: var(--text);
+    border: 2px solid var(--border-line);
+}
+
+.about-secondary-btn:hover {
+    border-color: var(--text-highlight);
+    color: var(--text-highlight);
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 2.8rem;
+    }
+    .about-container{
+        text-align: center;
+    }
+    .about-actions {
+        flex-direction: column;
+    }
+    .about-cta-btn, .about-secondary-btn {
+        text-align: center;
+    }
+}

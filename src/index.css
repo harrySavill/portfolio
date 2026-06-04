@@ -3,12 +3,24 @@
   --text: #f0f0f0;
   --border-line: #111184;
   --text-highlight: #7373FF;
+  --text-muted: #a0a0b0;
+  --accent: #5b6ef5;
+  --accent-text: #ffffff;
+  --tag-bg: #FFFFFF0D;
+  --status-soon-bg: #0d1152;
+  --status-soon-border: #2a35a0;
 }
 
 [data-theme="light"] {
   --bg: #ffffff;
   --text: #111111;
   --border-line: #eee;
+  --text-muted: #555566;
+  --accent: #3a4fd4;
+  --accent-text: #ffffff;
+  --tag-bg: #0000000A;
+  --status-soon-bg: #e8eaf6;
+  --status-soon-border: #9fa8da;
 }
 *{
   box-sizing: border-box;
