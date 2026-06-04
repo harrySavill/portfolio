@@ -1,0 +1,28 @@
+:root {
+  --bg: #000031;
+  --text: #f0f0f0;
+  --border-line: #111184;
+  --text-highlight: #7373FF;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #111111;
+  --border-line: #eee;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
