@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import "./Header.css"
-import logo from "../assets/hsdev-logo.png";
+
+const navItems = [
+    { href: "#about", label: "about" },
+    { href: "#skills", label: "skills" },
+    { href: "#projects", label: "projects" },
+    { href: "#contact", label: "contact" },
+];
 
 export default function Header() {
     const [isDark, setIsDark] = useState(true);
@@ -11,27 +17,30 @@ export default function Header() {
     }, [isDark]);
 
     return (
-        <header className="App-header">
-            <a href={"https://www.harrysavill.dev"} target="_blank" className="home-link">
-                <img className="logo-img" src={logo} alt="site logo"/>
-            </a>
-            <nav>
-                <ul className={`links-list ${menuOpen ? "open" : ""}`}>
-                    <li className="links-list-item"><a href="#about" onClick={() => setMenuOpen(false)}>about</a></li>
-                    <li className="links-list-item"><a href="#skills" onClick={() => setMenuOpen(false)}>skills</a></li>
-                    <li className="links-list-item"><a href="#projects" onClick={() => setMenuOpen(false)}>projects</a></li>
-                    <li className="links-list-item"><a href="#contact" onClick={() => setMenuOpen(false)}>contact</a></li>
-                    <li className="links-list-item">
-                        <button className="theme-toggle" onClick={() => setIsDark(prev => !prev)}>
-                            <span className="theme-dot"></span>
-                            {isDark ? "light" : "dark"}
-                        </button>
-                    </li>
-                </ul>
+        <header className="term-window app-header">
+            <div className="term-titlebar app-titlebar">
+                <div className="term-dots">
+                    <span className="term-dot term-dot--red"></span>
+                    <span className="term-dot term-dot--yellow"></span>
+                    <span className="term-dot term-dot--green"></span>
+                </div>
+                <a href="https://www.harrysavill.dev" target="_blank" rel="noreferrer" className="app-titlebar-path">
+                    harry@savill:~$
+                </a>
+                <button className="hamburger" onClick={() => setMenuOpen(prev => !prev)} aria-label="toggle menu">
+                    {menuOpen ? "[x]" : "[=]"}
+                </button>
+            </div>
+            <nav className={`links-list ${menuOpen ? "open" : ""}`}>
+                {navItems.map((item) => (
+                    <a key={item.href} href={item.href} className="links-list-item" onClick={() => setMenuOpen(false)}>
+                        <span className="term-prompt">./</span>{item.label}
+                    </a>
+                ))}
+                <button className="theme-toggle" onClick={() => setIsDark(prev => !prev)}>
+                    <span className="term-prompt">$</span> {isDark ? "theme light" : "theme dark"}
+                </button>
             </nav>
-            <button className="hamburger" onClick={() => setMenuOpen(prev => !prev)}>
-                {menuOpen ? "✕" : "☰"}
-            </button>
         </header>
     );
 }

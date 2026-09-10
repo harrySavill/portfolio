@@ -8,69 +8,62 @@
 
 .contact-container {
     width: 100%;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    max-width: 800px;
 }
 
-.contact-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--text);
+.contact-body {
+    padding: 2rem 1.75rem;
+}
+
+.contact-line {
+    color: var(--amber-dim);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
 .contact-bio {
-    color: var(--text-muted);
-    margin: 0;
-    font-size: 1.1rem;
+    color: var(--paper);
+    font-size: 1rem;
     line-height: 1.7;
+    margin-bottom: 1.75rem;
+    max-width: 60ch;
 }
 
 .contact-links {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .contact-card {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1.5rem;
-    border: 2px solid var(--border-line);
-    border-radius: 1rem;
-    text-decoration: none;
-    transition: border-color 0.2s;
+    gap: 0.4rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--amber-faint);
+    cursor: pointer;
+    transition: border-color 0.15s;
     flex: 1;
+    min-width: 220px;
 }
 
 .contact-card:hover {
-    border-color: var(--accent);
-    cursor: pointer;
+    border-color: var(--amber);
 }
 
 .contact-label {
     font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-muted);
-    margin: 0;
+    color: var(--amber-dim);
 }
 
 .contact-display {
     font-size: 1rem;
-    color: var(--text);
-    margin: 0;
+    color: var(--amber-bright);
 }
 
 @media (max-width: 600px) {
-    .contact-links {
-        flex-direction: column;
-    }
-
-    .contact-title {
-        font-size: 2rem;
+    .contact-body {
+        padding: 1.5rem 1.25rem;
     }
 }
