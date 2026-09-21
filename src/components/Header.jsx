@@ -9,7 +9,7 @@ const navItems = [
 ];
 
 export default function Header() {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
