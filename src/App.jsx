@@ -4,6 +4,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from "./components/Projects.jsx";
 import Contact from './components/Contact.jsx'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
 
